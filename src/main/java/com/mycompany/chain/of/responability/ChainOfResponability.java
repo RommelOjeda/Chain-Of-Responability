@@ -38,20 +38,33 @@ public class ChainOfResponability {
         switch (ra) {
             case 1:
                         if(de==1){
-                            ManejadorConcreto1(number1,number2,resp);
+                            int oper = ManejadorConcreto1(number1,number2,resp);
+                            JOptionPane.showMessageDialog(null, "La Operacion fue realizada con exito " + oper);
                             
                         }else{
-                            System.out.println("el proceso cambi de manejador");
+                            System.out.println("el proceso cambio de manejador");
                         }
 
                 
                 break;
             case 2:
-                ManejadorConcreto2(number1,number2);
+                        if(de==1){
+                            int oper = ManejadorConcreto2(number1,number2,resp);
+                            JOptionPane.showMessageDialog(null, "La Operacion fue realizada con exito " + oper);  
+                            
+                        }else{
+                            System.out.println("el proceso cambio de manejador");
+                        }
 
                 break;
             case 3:
-                ManejadorConcreto3(number1,number2);
+                        if(de==1){
+                            int oper = ManejadorConcreto3(number1,number2,resp);
+                            JOptionPane.showMessageDialog(null, "La Operacion fue realizada con exito " + oper);                            
+                           
+                        }else{
+                            System.out.println("el proceso cambio de manejador");
+                        }
 
                 break;
             default:
@@ -73,21 +86,49 @@ public class ChainOfResponability {
             operaciom=x-y;
             
         }if(fun=="Multiplicacion"){
-            
+            operaciom=x*y;
         }if(fun=="Dividir"){
-            
+            operaciom=x/y;
         }
 
         return operaciom;
         }
 
-    public static void ManejadorConcreto2(int x,int y) {
+    public static int ManejadorConcreto2(int x,int y,String fun) {
+        int operaciom=0;
 
-    }
+       
+          if(fun=="Suma"){
+              operaciom=x+y;
+        }if(fun=="Resta"){
+            operaciom=x-y;
+            
+        }if(fun=="Multiplicacion"){
+            operaciom=x*y;
+        }if(fun=="Dividir"){
+            operaciom=x/y;
+        }
 
-    public static void ManejadorConcreto3(int x,int y) {
+        return operaciom;
+        }
+    
+    public static int ManejadorConcreto3(int x,int y,String fun) {
+        int operaciom=0;
 
-    }
+       
+          if(fun=="Suma"){
+              operaciom=x+y;
+        }if(fun=="Resta"){
+            operaciom=x-y;
+            
+        }if(fun=="Multiplicacion"){
+            operaciom=x*y;
+        }if(fun=="Dividir"){
+            operaciom=x/y;
+        }
+
+        return operaciom;
+        }
 
     public static int ramdom() {
         Random r1 = new Random();
